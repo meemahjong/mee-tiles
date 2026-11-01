@@ -1,6 +1,6 @@
 {
   "name": "@meemahjong/tiles",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "MEE Mahjong tile faces: 34 original SVG tiles plus backs, indexed by MPSZ code",
   "type": "module",

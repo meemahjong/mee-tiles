@@ -39,8 +39,22 @@ test('inlined strings match the SVG files', () => {
   assert.deepEqual(Object.keys(pkg.tiles), [...pkg.TILE_CODES]);
 });
 
+test('numberedTiles: 万 and the winds only, from the learner set', () => {
+  const codes = Object.keys(pkg.numberedTiles);
+  assert.deepEqual(codes, [...pkg.TILE_CODES.filter((c) => c.endsWith('m')), '1z', '2z', '3z', '4z']);
+  for (const code of codes) {
+    assert.equal(pkg.numberedTiles[code], inline(read(`svg_tiles_index_learner/${code}.svg`)), code);
+    assert.notEqual(pkg.numberedTiles[code], pkg.tiles[code], code);
+  }
+});
+
 test('every SVG is standalone, 400×507, and safe to inline', () => {
-  const all = [...Object.values(pkg.symbols), ...Object.values(pkg.tiles), ...Object.values(pkg.backs)];
+  const all = [
+    ...Object.values(pkg.symbols),
+    ...Object.values(pkg.tiles),
+    ...Object.values(pkg.numberedTiles),
+    ...Object.values(pkg.backs),
+  ];
   for (const s of all) {
     assert.ok(s.startsWith('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507"'));
     assert.ok(!/\sid=/.test(s), 'ids would collide when several tiles share a page');

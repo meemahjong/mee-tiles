@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507" width="400" height="507">
+  <title>三条 / 3s</title>
+  <rect x="3.2" y="3.2" width="393.6" height="500.6" rx="34" fill="#FDFDFB" stroke="#CDCDC6" stroke-width="6.4"/>
+  <path d="M200,70.388 L200,203.392" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="200" cy="70.388" r="27.8" fill="#2F5D35"/>
+  <circle cx="200" cy="136.89" r="27.8" fill="#2F5D35"/>
+  <circle cx="200" cy="203.392" r="27.8" fill="#2F5D35"/>
+  <path d="M200,53.708 L200,220.072" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M128,303.608 L128,436.612" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="128" cy="303.608" r="27.8" fill="#2F5D35"/>
+  <circle cx="128" cy="370.11" r="27.8" fill="#2F5D35"/>
+  <circle cx="128" cy="436.612" r="27.8" fill="#2F5D35"/>
+  <path d="M128,286.928 L128,453.292" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M272,303.608 L272,436.612" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="272" cy="303.608" r="27.8" fill="#2F5D35"/>
+  <circle cx="272" cy="370.11" r="27.8" fill="#2F5D35"/>
+  <circle cx="272" cy="436.612" r="27.8" fill="#2F5D35"/>
+  <path d="M272,286.928 L272,453.292" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+</svg>

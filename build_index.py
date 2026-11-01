@@ -1,6 +1,7 @@
 """index.js for the npm package: every SVG in svg_tiles/ inlined as a string,
 keyed by MPSZ code, so an app bundles the faces and never fetches them at run
-time (offline must work). Run by svg_tiles.py after it writes the SVGs; run it
+time (offline must work). numberedTiles adds the faces from
+svg_tiles_index_learner/ that differ from the plain ones (万 and the winds). Run by svg_tiles.py after it writes the SVGs; run it
 alone after hand-editing an SVG.
 
 The strings are the files themselves with the whitespace between tags removed
@@ -12,22 +13,28 @@ import mj34
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 SVG  = os.path.join(ROOT, 'svg_tiles')
+LEARNER = os.path.join(ROOT, 'svg_tiles_index_learner')
 CODES = ([f'{n}{s}' for s in 'mps' for n in range(1, 10)]
          + [f'{n}z' for n in range(1, 8)])            # 5z 6z 7z = 白 发 中
 BACKS = {'plain': 'back', 'question': 'back_question'}
 
 
-def svg(name):
-    path = os.path.join(SVG, f'{name}.svg')
+def svg(name, folder=SVG):
+    path = os.path.join(folder, f'{name}.svg')
     assert os.path.exists(path), f'missing {path}'   # never ship a gap
     with open(path, encoding='utf-8') as fh:
         return re.sub(r'>\s+<', '><', fh.read().strip())
 
 
-def table(names):
-    rows = ',\n'.join(f'  {json.dumps(k)}: {json.dumps(svg(v), ensure_ascii=False)}'
+def table(names, folder=SVG):
+    rows = ',\n'.join(f'  {json.dumps(k)}: {json.dumps(svg(v, folder), ensure_ascii=False)}'
                       for k, v in names.items())
     return f'/* @__PURE__ */ Object.freeze({{\n{rows},\n}})'
+
+
+def numbered():
+    """Codes whose learner face carries an index (万 and the winds): only these ship."""
+    return [c for c in CODES if svg(c, LEARNER) != svg(c)]
 
 
 def main():
@@ -44,6 +51,7 @@ def main():
         'export function isTileCode(s) {\n  return CODE_SET.has(s);\n}\n\n'
         f'export const symbols = {table({c: f"{c}_symbol" for c in CODES})};\n\n'
         f'export const tiles = {table({c: c for c in CODES})};\n\n'
+        f'export const numberedTiles = {table({c: c for c in numbered()}, LEARNER)};\n\n'
         f'export const backs = {table(BACKS)};\n'
     )
     with open(os.path.join(ROOT, 'index.js'), 'w', encoding='utf-8', newline='\n') as fh:

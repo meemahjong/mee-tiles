@@ -334,7 +334,7 @@ def glyph_center(im, ch, color, em_frac, max_w_frac, cy_frac, font=None):
 
 # ------------------------------------------------------------------- index
 # A Latin index in the top-left corner, for players who do not read Chinese.
-INDEX_SCHEME = None                 # None | 'plain' | 'mpsz'
+INDEX_SCHEME = None                 # None | 'plain' | 'mpsz' | 'learner'
 INDEX_FONT   = font_file('DejaVuSans-Bold.ttf',
                          '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf')
 INDEX_H      = 0.070                # cap height / tile height
@@ -342,6 +342,16 @@ INDEX_W_MAX  = 0.125
 INDEX_X      = 0.048
 INDEX_CY     = 0.090
 
+# Schemes drawn at another size: (INDEX_H, INDEX_W_MAX, INDEX_X, INDEX_CY).
+# 'learner' is for screens, where a tile can be 40 px wide: bigger than print.
+INDEX_GEOMETRY = {'learner': (0.160, 0.210, 0.048, 0.120)}
+
+
+def index_geometry():
+    return INDEX_GEOMETRY.get(INDEX_SCHEME, (INDEX_H, INDEX_W_MAX, INDEX_X, INDEX_CY))
+
+
+# A kind missing from a scheme gets no index.
 IDX = {
     'plain': {'m': [str(i) for i in range(1, 10)],
               'p': [str(i) for i in range(1, 10)],
@@ -353,27 +363,33 @@ IDX = {
               's': [f'{i}s' for i in range(1, 10)],
               'wind': ['1z', '2z', '3z', '4z'],
               'red': '7z', 'green': '6z', 'white': '5z'},
+    # On screen for players who do not read Chinese: only the tiles they
+    # cannot tell apart by sight. 饼 and 条 can be counted; the dragons differ
+    # in colour.
+    'learner': {'m': [str(i) for i in range(1, 10)],
+                'wind': ['E', 'S', 'W', 'N']},
 }
 
 
 def _idx(kind, i=None):
     if not INDEX_SCHEME:
         return None
-    t = IDX[INDEX_SCHEME][kind]
+    t = IDX[INDEX_SCHEME].get(kind)
     return t[i] if isinstance(t, list) else t
 
 
 def index_label(im, text, color):
     if not text:
         return
+    ih_, iw_max, ix, icy = index_geometry()
     ink = _ink_plain(text, INDEX_FONT)
     iw, ih = ink.size
-    s = INDEX_H*h/ih
-    if iw*s > INDEX_W_MAX*w:
-        s = INDEX_W_MAX*w/iw
+    s = ih_*h/ih
+    if iw*s > iw_max*w:
+        s = iw_max*w/iw
     tw_, th_ = max(1, round(iw*s)), max(1, round(ih*s))
     _place(im, ink, color, (tw_, th_),
-           (round(INDEX_X*w), round(INDEX_CY*h - th_/2)))
+           (round(ix*w), round(icy*h - th_/2)))
 
 
 def _ink_plain(text, font_path):

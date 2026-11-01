@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507" width="400" height="507">
+  <title>四条 / 4s</title>
+  <path d="M120,75.458 L120,208.462" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="120" cy="75.458" r="27.8" fill="#2F5D35"/>
+  <circle cx="120" cy="141.96" r="27.8" fill="#2F5D35"/>
+  <circle cx="120" cy="208.462" r="27.8" fill="#2F5D35"/>
+  <path d="M120,58.778 L120,225.142" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M280,75.458 L280,208.462" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="280" cy="75.458" r="27.8" fill="#2F5D35"/>
+  <circle cx="280" cy="141.96" r="27.8" fill="#2F5D35"/>
+  <circle cx="280" cy="208.462" r="27.8" fill="#2F5D35"/>
+  <path d="M280,58.778 L280,225.142" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M120,298.538 L120,431.542" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="120" cy="298.538" r="27.8" fill="#2F5D35"/>
+  <circle cx="120" cy="365.04" r="27.8" fill="#2F5D35"/>
+  <circle cx="120" cy="431.542" r="27.8" fill="#2F5D35"/>
+  <path d="M120,281.858 L120,448.222" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M280,298.538 L280,431.542" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="280" cy="298.538" r="27.8" fill="#2F5D35"/>
+  <circle cx="280" cy="365.04" r="27.8" fill="#2F5D35"/>
+  <circle cx="280" cy="431.542" r="27.8" fill="#2F5D35"/>
+  <path d="M280,281.858 L280,448.222" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+</svg>

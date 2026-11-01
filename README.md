@@ -24,12 +24,14 @@ import { TILE_CODES, symbols, tiles, backs, isTileCode } from '@meemahjong/tiles
 symbols['5z'];   // 白板，无框透明的完整 <svg> 字符串
 tiles['1m'];     // 一万，带牌框
 backs.plain;     // 牌背；backs.question 是带问号的牌背
+numberedTiles['1m'] ?? tiles['1m'];  // 带角标的一万（只有万和东南西北有，其他用 tiles）
 ```
 
 - 牌面以字符串形式编进应用，**运行时不联网**，离线可用。
 - 也可以直接引用文件：`@meemahjong/tiles/svg/1m_symbol.svg`（对应仓库里的 `svg_tiles/`）。
 - 编号是 MPSZ：`1m–9m` 万、`1p–9p` 饼、`1s–9s` 条、`1z–7z` = 东 南 西 北 白 发 中。`TILE_CODES` 按 m → p → s → z 排列；理牌时怎么排由应用决定。
 - 所有 SVG 的 viewBox 都是 `0 0 400 507`，不含 `id`、字体或外部资源，同一页面放多张不会冲突。
+- `numberedTiles` 给不懂中文的玩家在屏幕上用：万左上角标 `1`–`9`，东南西北标 `E S W N`，角标比打印版大（牌高的 16%）。只含这 13 张；饼条数得出，中发白靠颜色认，不加角标。
 - 牌底色是 `FACE_COLOR`（`#FDFDFB`），替换它可以换牌底颜色。
 - 使用者不需要 Python 和字体：生成好的 SVG 和 `index.js` 都已提交。
 
@@ -39,7 +41,7 @@ backs.plain;     // 牌背；backs.question 是带问号的牌背
 |---|---|
 | `mj34.py` | **源头**。所有牌面的参数化定义，34 张栅格由此生成 |
 | `svg_tiles.py` | 真矢量 SVG 生成器（读 `mj34` 的常数，不另立一套），也生成牌背和 `index.js` |
-| `build_index.py` | 把 `svg_tiles/` 里的 SVG 内嵌成 `index.js` |
+| `build_index.py` | 把 `svg_tiles/` 里的 SVG（和 `svg_tiles_index_learner/` 里带角标的 13 张）内嵌成 `index.js` |
 | `index.js` / `index.d.ts` | npm 包的入口（生成）/ 类型（手写） |
 | `test/` | `node --test`：检查 `index.js` 和 SVG 一致、对外路径可用 |
 | `sheet34.py` | 34 张对照表 |
@@ -47,6 +49,7 @@ backs.plain;     // 牌背；backs.question 是带问号的牌背
 | `own_tiles/full/` | 34 张 PNG（400×507） |
 | `svg_tiles/` | 34 张 SVG ×2（带框 + `_symbol` 无框透明），加牌背 `back.svg`、`back_question.svg` |
 | `svg_tiles_index_plain/` | 同上，带 `1-9 / E S W N / R G Wh` 索引（打印用，不进 npm 包） |
+| `svg_tiles_index_learner/` | 同上，只有万标 `1-9`、风标 `E S W N`，角标放大（屏幕用，13 张进 npm 包的 `numberedTiles`） |
 | `latex_tiles/tiles/` | 41 个 PDF，**全部真矢量**，104 KB |
 
 ## 重新生成

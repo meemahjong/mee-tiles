@@ -118,9 +118,10 @@ def index_svg(text, col):
         adv += hm[gn][0]*k
     if not parts: return []
     iw, ih = maxx-minx, maxy-miny
-    s = mj34.INDEX_H*H/ih
-    if iw*s > mj34.INDEX_W_MAX*W: s = mj34.INDEX_W_MAX*W/iw
-    tx = mj34.INDEX_X*W; ty = mj34.INDEX_CY*H - ih*s/2
+    ih_, iw_max, ix, icy = mj34.index_geometry()
+    s = ih_*H/ih
+    if iw*s > iw_max*W: s = iw_max*W/iw
+    tx = ix*W; ty = icy*H - ih*s/2
     return [f'<g transform="translate({f(tx)} {f(ty)}) scale({f(s)}) '
             f'translate({f(-minx)} {f(-miny)})">'
             f'<path d="{" ".join(parts)}" fill="{col}"/></g>']
@@ -300,7 +301,8 @@ def build(outdir='svg_tiles', profile='wenkai', index=None):
 
 if __name__ == '__main__':
     for out, idx in (('svg_tiles', None),
-                     ('svg_tiles_index_plain', 'plain')):
+                     ('svg_tiles_index_plain', 'plain'),
+                     ('svg_tiles_index_learner', 'learner')):
         n, t = build(out, index=idx)
         print('%-24s %2d files, %.0f KB' % (out, n, t/1024))
     build_backs('svg_tiles')

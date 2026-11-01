@@ -28,5 +28,12 @@ export const symbols: Readonly<Record<TileCode, string>>;
 /** Face on the standard plate (rounded rect with border). Complete standalone <svg> strings. */
 export const tiles: Readonly<Record<TileCode, string>>;
 
+/**
+ * On screen for players who do not read Chinese: 万 with 1–9 and the winds with
+ * E S W N in the top-left corner, on the standard plate. Only those 13 tiles;
+ * use `tiles` for the rest (饼 and 条 can be counted, the dragons differ in colour).
+ */
+export const numberedTiles: Readonly<Partial<Record<TileCode, string>>>;
+
 /** Tile backs: complete tiles with their own plate. */
 export const backs: Readonly<{ plain: string; question: string }>;
