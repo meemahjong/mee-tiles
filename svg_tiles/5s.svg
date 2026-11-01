@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507" width="400" height="507">
+  <title>五条 / 5s</title>
+  <rect x="3.2" y="3.2" width="393.6" height="500.6" rx="34" fill="#FDFDFB" stroke="#CDCDC6" stroke-width="6.4"/>
+  <path d="M108,70.388 L108,203.392" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="108" cy="70.388" r="27.8" fill="#2F5D35"/>
+  <circle cx="108" cy="136.89" r="27.8" fill="#2F5D35"/>
+  <circle cx="108" cy="203.392" r="27.8" fill="#2F5D35"/>
+  <path d="M108,53.708 L108,220.072" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M292,70.388 L292,203.392" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="292" cy="70.388" r="27.8" fill="#2F5D35"/>
+  <circle cx="292" cy="136.89" r="27.8" fill="#2F5D35"/>
+  <circle cx="292" cy="203.392" r="27.8" fill="#2F5D35"/>
+  <path d="M292,53.708 L292,220.072" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M200,186.998 L200,320.002" fill="none" stroke="#D62518" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="200" cy="186.998" r="27.8" fill="#D62518"/>
+  <circle cx="200" cy="253.5" r="27.8" fill="#D62518"/>
+  <circle cx="200" cy="320.002" r="27.8" fill="#D62518"/>
+  <path d="M200,170.318 L200,336.682" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M108,303.608 L108,436.612" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="108" cy="303.608" r="27.8" fill="#2F5D35"/>
+  <circle cx="108" cy="370.11" r="27.8" fill="#2F5D35"/>
+  <circle cx="108" cy="436.612" r="27.8" fill="#2F5D35"/>
+  <path d="M108,286.928 L108,453.292" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+  <path d="M292,303.608 L292,436.612" fill="none" stroke="#2F5D35" stroke-width="36" stroke-linejoin="round" stroke-linecap="butt"/>
+  <circle cx="292" cy="303.608" r="27.8" fill="#2F5D35"/>
+  <circle cx="292" cy="370.11" r="27.8" fill="#2F5D35"/>
+  <circle cx="292" cy="436.612" r="27.8" fill="#2F5D35"/>
+  <path d="M292,286.928 L292,453.292" fill="none" stroke="#FDFDFB" stroke-width="9.25" stroke-linejoin="round" stroke-linecap="butt"/>
+</svg>

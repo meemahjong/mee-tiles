@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507" width="400" height="507">
+  <title>一饼 / 1p</title>
+  <circle cx="200" cy="253.5" r="153" fill="#252C8C"/>
+  <circle cx="200" cy="253.5" r="133.875" fill="#FDFDFB"/>
+  <circle cx="200" cy="253.5" r="126.225" fill="#252C8C"/>
+  <circle cx="200" cy="253.5" r="113.985" fill="#FDFDFB"/>
+  <circle cx="200" cy="253.5" r="107.865" fill="#2F5D35"/>
+  <ellipse cx="269.615" cy="253.5" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(-90 269.615 253.5)"/>
+  <ellipse cx="256.32" cy="294.419" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(-54 256.32 294.419)"/>
+  <ellipse cx="221.512" cy="319.708" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(-18 221.512 319.708)"/>
+  <ellipse cx="178.488" cy="319.708" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(18 178.488 319.708)"/>
+  <ellipse cx="143.68" cy="294.419" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(54 143.68 294.419)"/>
+  <ellipse cx="130.385" cy="253.5" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(90 130.385 253.5)"/>
+  <ellipse cx="143.68" cy="212.581" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(126 143.68 212.581)"/>
+  <ellipse cx="178.488" cy="187.292" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(162 178.488 187.292)"/>
+  <ellipse cx="221.512" cy="187.292" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(198 221.512 187.292)"/>
+  <ellipse cx="256.32" cy="212.581" rx="17.595" ry="35.955" fill="#FDFDFB" transform="rotate(234 256.32 212.581)"/>
+  <circle cx="200" cy="253.5" r="45.9" fill="#D62518"/>
+  <rect x="157.16" y="242.025" width="85.68" height="22.95" fill="#FDFDFB"/>
+  <rect x="188.525" y="210.66" width="22.95" height="85.68" fill="#FDFDFB"/>
+  <g transform="translate(19.2 27.885) scale(0.049) translate(-112.793 729.004)"><path d="M117.1875 -129.8828125H283.203125V-601.07421875L112.79296875 -565.91796875V-693.84765625L282.2265625 -729.00390625H460.9375V-129.8828125H626.953125V0.0H117.1875Z" fill="#252C8C"/></g>
+</svg>

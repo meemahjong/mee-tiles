@@ -1,0 +1,9 @@
+# Generated archives; attach to a GitHub Release if needed
+*.zip
+*.tgz
+
+# Fonts are downloaded locally, not committed (see README)
+fonts/
+
+__pycache__/
+node_modules/

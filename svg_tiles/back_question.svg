@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507" width="400" height="507">
+  <title>问号牌背 / back with question mark</title>
+  <rect x="3.2" y="3.2" width="393.6" height="500.6" rx="34" fill="#1F9E74" stroke="#177A59" stroke-width="6.4"/>
+  <path d="M138 188 C138 138 172 106 206 106 C244 106 270 132 270 168 C270 204 242 218 224 238 C210 253 206 266 206 292" fill="none" stroke="#FDFDFB" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="206" cy="372" r="23" fill="#FDFDFB"/>
+</svg>

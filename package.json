@@ -1,0 +1,33 @@
+{
+  "name": "@meemahjong/tiles",
+  "version": "0.1.0",
+  "private": true,
+  "description": "MEE Mahjong tile faces: 34 original SVG tiles plus backs, indexed by MPSZ code",
+  "type": "module",
+  "sideEffects": false,
+  "license": "(MIT AND CC-BY-NC-4.0)",
+  "author": "MEE Mahjong",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meemahjong/mee-tiles.git"
+  },
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./svg/*": "./svg_tiles/*",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "svg_tiles/",
+    "LICENSE",
+    "LICENSE-ART.md"
+  ],
+  "scripts": {
+    "generate": "python svg_tiles.py",
+    "test": "node --test"
+  }
+}

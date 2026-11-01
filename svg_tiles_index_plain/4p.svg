@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507" width="400" height="507">
+  <title>四饼 / 4p</title>
+  <rect x="3.2" y="3.2" width="393.6" height="500.6" rx="34" fill="#FDFDFB" stroke="#CDCDC6" stroke-width="6.4"/>
+  <circle cx="124" cy="162.24" r="48" fill="#252C8C"/>
+  <circle cx="124" cy="162.24" r="33.6" fill="#FDFDFB"/>
+  <circle cx="124" cy="162.24" r="25.92" fill="#252C8C"/>
+  <circle cx="124" cy="162.24" r="14.4" fill="#FDFDFB"/>
+  <circle cx="124" cy="162.24" r="6.72" fill="#252C8C"/>
+  <circle cx="276" cy="162.24" r="48" fill="#2F5D35"/>
+  <circle cx="276" cy="162.24" r="33.6" fill="#FDFDFB"/>
+  <circle cx="276" cy="162.24" r="25.92" fill="#2F5D35"/>
+  <circle cx="276" cy="162.24" r="14.4" fill="#FDFDFB"/>
+  <circle cx="276" cy="162.24" r="6.72" fill="#2F5D35"/>
+  <circle cx="124" cy="344.76" r="48" fill="#2F5D35"/>
+  <circle cx="124" cy="344.76" r="33.6" fill="#FDFDFB"/>
+  <circle cx="124" cy="344.76" r="25.92" fill="#2F5D35"/>
+  <circle cx="124" cy="344.76" r="14.4" fill="#FDFDFB"/>
+  <circle cx="124" cy="344.76" r="6.72" fill="#2F5D35"/>
+  <circle cx="276" cy="344.76" r="48" fill="#252C8C"/>
+  <circle cx="276" cy="344.76" r="33.6" fill="#FDFDFB"/>
+  <circle cx="276" cy="344.76" r="25.92" fill="#252C8C"/>
+  <circle cx="276" cy="344.76" r="14.4" fill="#FDFDFB"/>
+  <circle cx="276" cy="344.76" r="6.72" fill="#252C8C"/>
+  <g transform="translate(19.2 27.885) scale(0.049) translate(-44.922 729.004)"><path d="M368.1640625 -574.21875 162.109375 -269.04296875H368.1640625ZM336.9140625 -729.00390625H545.8984375V-269.04296875H649.90234375V-132.8125H545.8984375V0.0H368.1640625V-132.8125H44.921875V-293.9453125Z" fill="#252C8C"/></g>
+</svg>

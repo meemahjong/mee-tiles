@@ -1,0 +1,5 @@
+# Regenerating the tiles only; using the package needs none of this.
+Pillow
+fonttools
+# build_latex_tiles.py only; needs the Cairo library (libcairo-2.dll on Windows)
+cairosvg

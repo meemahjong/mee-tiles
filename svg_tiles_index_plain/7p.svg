@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 507" width="400" height="507">
+  <title>七饼 / 7p</title>
+  <rect x="3.2" y="3.2" width="393.6" height="500.6" rx="34" fill="#FDFDFB" stroke="#CDCDC6" stroke-width="6.4"/>
+  <circle cx="106" cy="101.907" r="48" fill="#2F5D35"/>
+  <circle cx="106" cy="101.907" r="33.6" fill="#FDFDFB"/>
+  <circle cx="106" cy="101.907" r="25.92" fill="#2F5D35"/>
+  <circle cx="106" cy="101.907" r="14.4" fill="#FDFDFB"/>
+  <circle cx="106" cy="101.907" r="6.72" fill="#2F5D35"/>
+  <circle cx="200" cy="146.523" r="48" fill="#2F5D35"/>
+  <circle cx="200" cy="146.523" r="33.6" fill="#FDFDFB"/>
+  <circle cx="200" cy="146.523" r="25.92" fill="#2F5D35"/>
+  <circle cx="200" cy="146.523" r="14.4" fill="#FDFDFB"/>
+  <circle cx="200" cy="146.523" r="6.72" fill="#2F5D35"/>
+  <circle cx="294" cy="191.139" r="48" fill="#2F5D35"/>
+  <circle cx="294" cy="191.139" r="33.6" fill="#FDFDFB"/>
+  <circle cx="294" cy="191.139" r="25.92" fill="#2F5D35"/>
+  <circle cx="294" cy="191.139" r="14.4" fill="#FDFDFB"/>
+  <circle cx="294" cy="191.139" r="6.72" fill="#2F5D35"/>
+  <circle cx="147.992" cy="300.357" r="48" fill="#D62518"/>
+  <circle cx="147.992" cy="300.357" r="33.6" fill="#FDFDFB"/>
+  <circle cx="147.992" cy="300.357" r="25.92" fill="#D62518"/>
+  <circle cx="147.992" cy="300.357" r="14.4" fill="#FDFDFB"/>
+  <circle cx="147.992" cy="300.357" r="6.72" fill="#D62518"/>
+  <circle cx="252.008" cy="300.357" r="48" fill="#D62518"/>
+  <circle cx="252.008" cy="300.357" r="33.6" fill="#FDFDFB"/>
+  <circle cx="252.008" cy="300.357" r="25.92" fill="#D62518"/>
+  <circle cx="252.008" cy="300.357" r="14.4" fill="#FDFDFB"/>
+  <circle cx="252.008" cy="300.357" r="6.72" fill="#D62518"/>
+  <circle cx="147.992" cy="404.373" r="48" fill="#D62518"/>
+  <circle cx="147.992" cy="404.373" r="33.6" fill="#FDFDFB"/>
+  <circle cx="147.992" cy="404.373" r="25.92" fill="#D62518"/>
+  <circle cx="147.992" cy="404.373" r="14.4" fill="#FDFDFB"/>
+  <circle cx="147.992" cy="404.373" r="6.72" fill="#D62518"/>
+  <circle cx="252.008" cy="404.373" r="48" fill="#D62518"/>
+  <circle cx="252.008" cy="404.373" r="33.6" fill="#FDFDFB"/>
+  <circle cx="252.008" cy="404.373" r="25.92" fill="#D62518"/>
+  <circle cx="252.008" cy="404.373" r="14.4" fill="#FDFDFB"/>
+  <circle cx="252.008" cy="404.373" r="6.72" fill="#D62518"/>
+  <g transform="translate(19.2 27.885) scale(0.049) translate(-66.895 729.004)"><path d="M66.89453125 -729.00390625H616.2109375V-623.046875L332.03125 0.0H148.92578125L417.96875 -590.8203125H66.89453125Z" fill="#252C8C"/></g>
+</svg>
