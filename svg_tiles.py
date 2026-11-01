@@ -12,7 +12,7 @@ Three families, three techniques:
 
 Optional Latin index, same schemes and placement as the raster set.
 """
-import math, os, sys
+import math, os, struct, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mj34
 from fontTools.ttLib import TTFont
@@ -40,11 +40,31 @@ def _ft(path, idx=0):
         _FC[k] = TTFont(path, fontNumber=idx) if path.endswith('.ttc') else TTFont(path)
     return _FC[k]
 
+_CM = {}
+def cmap(ft):
+    """Unicode -> glyph name. LXGW WenKai's format-4 subtable is over 64 KB, so
+    its 16-bit length field overflows and fontTools cannot decode the cmap
+    table; fall back to reading the (3, 10) format-12 subtable directly."""
+    if id(ft) not in _CM:
+        try:
+            _CM[id(ft)] = ft.getBestCmap()
+        except IndexError:
+            raw = ft.reader['cmap']; order = ft.getGlyphOrder(); m = {}
+            for i in range(struct.unpack('>HH', raw[:4])[1]):
+                pid, eid, off = struct.unpack('>HHI', raw[4+8*i:12+8*i])
+                if (pid, eid) != (3, 10): continue
+                for j in range(struct.unpack('>I', raw[off+12:off+16])[0]):
+                    a, b, g = struct.unpack('>III', raw[off+16+12*j:off+28+12*j])
+                    m.update((c, order[g+c-a]) for c in range(a, b+1))
+            assert m, 'no usable cmap'
+            _CM[id(ft)] = m
+    return _CM[id(ft)]
+
 def glyph(ch, spec):
     """-> (path d in EM=1000 y-down units, ink bbox before dilation)"""
     path, idx = spec if isinstance(spec, tuple) else (spec, 0)
     ft = _ft(path, idx); k = 1000.0/ft['head'].unitsPerEm
-    gn = ft.getBestCmap()[ord(ch)]; gs = ft.getGlyphSet()
+    gn = cmap(ft)[ord(ch)]; gs = ft.getGlyphSet()
     p = SVGPathPen(gs); gs[gn].draw(TransformPen(p, Transform(k, 0, 0, -k, 0, 0)))
     b = BoundsPen(gs); gs[gn].draw(b)
     x0, y0, x1, y1 = b.bounds
@@ -81,11 +101,11 @@ def index_svg(text, col):
     """Latin index in the top-left, matching mj34.index_label's placement."""
     if not text: return []
     ft = _ft(mj34.INDEX_FONT); k = 1000.0/ft['head'].unitsPerEm
-    gs = ft.getGlyphSet(); cmap = ft.getBestCmap(); hm = ft['hmtx']
+    gs = ft.getGlyphSet(); cm = cmap(ft); hm = ft['hmtx']
     parts = []; adv = 0.0
     minx = miny = 1e9; maxx = maxy = -1e9
     for ch in text:
-        gn = cmap.get(ord(ch))
+        gn = cm.get(ord(ch))
         if gn is None: continue
         p = SVGPathPen(gs)
         gs[gn].draw(TransformPen(p, Transform(k, 0, 0, -k, adv, 0)))
