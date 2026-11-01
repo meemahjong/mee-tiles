@@ -47,7 +47,6 @@ backs.plain;     // 牌背；backs.question 是带问号的牌背
 | `own_tiles/full/` | 34 张 PNG（400×507） |
 | `svg_tiles/` | 34 张 SVG ×2（带框 + `_symbol` 无框透明），加牌背 `back.svg`、`back_question.svg` |
 | `svg_tiles_index_plain/` | 同上，带 `1-9 / E S W N / R G Wh` 索引（打印用，不进 npm 包） |
-| `svg_tiles_index_mpsz/` | 同上，带 `1m-9m / 1z-7z` 索引（打印用，不进 npm 包） |
 | `latex_tiles/tiles/` | 41 个 PDF，**全部真矢量**，104 KB |
 
 ## 重新生成
@@ -57,7 +56,7 @@ backs.plain;     // 牌背；backs.question 是带问号的牌背
 1. 装依赖：`pip install -r requirements.txt`
 2. 准备字体（不提交进仓库）：放进 `fonts/`，或用环境变量 `MEE_FONT_DIR` 指向字体所在目录。找不到时退回 Linux 的系统路径。
    - `LXGWWenKai-Bold.ttf`：[霞鹜文楷](https://github.com/lxgw/LxgwWenKai)，牌面汉字。**v1.330 是最后一个有 Bold 的版本**（v1.500 起改名为 Medium，字形不同，不要用）。v1.320 和 v1.330 生成的 SVG 都和仓库里的逐字节一致。
-   - `DejaVuSans-Bold.ttf`：带索引的两套 SVG，[DejaVu 2.37](https://github.com/dejavu-fonts/dejavu-fonts/releases)
+   - `DejaVuSans-Bold.ttf`：带索引的那套 SVG，[DejaVu 2.37](https://github.com/dejavu-fonts/dejavu-fonts/releases)
    - `NotoSansCJK-Bold.ttc`、`NotoSansCJK-Regular.ttc`、`DejaVuSans.ttf`：只有对照表 `sheet34.py` 用
 3. 运行（Windows 上把 `python3` 换成 `py`）：
 

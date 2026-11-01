@@ -300,8 +300,7 @@ def build(outdir='svg_tiles', profile='wenkai', index=None):
 
 if __name__ == '__main__':
     for out, idx in (('svg_tiles', None),
-                     ('svg_tiles_index_plain', 'plain'),
-                     ('svg_tiles_index_mpsz', 'mpsz')):
+                     ('svg_tiles_index_plain', 'plain')):
         n, t = build(out, index=idx)
         print('%-24s %2d files, %.0f KB' % (out, n, t/1024))
     build_backs('svg_tiles')

@@ -10,7 +10,7 @@ The tile artwork is licensed under the [Creative Commons Attribution-NonCommerci
 
 美术包括 / The artwork is:
 
-- `svg_tiles/`、`svg_tiles_index_plain/`、`svg_tiles_index_mpsz/` 里的 SVG；
+- `svg_tiles/`、`svg_tiles_index_plain/` 里的 SVG；
 - `own_tiles/` 里的 PNG，`latex_tiles/` 里的 PDF；
 - `index.js` 里内嵌的 SVG 字符串；
 - 用本仓库脚本生成的任何牌面图案。脚本本身是代码，按 MIT 授权（见 `LICENSE`），但 MIT 不授予牌面图案的权利。
@@ -38,4 +38,4 @@ Code (the Python scripts, the code in `index.js`, `index.d.ts`, tests) is MIT �
 Glyphs are converted to outlines; no font files are included. The fonts below permit this use without attribution; they are listed for information only.
 
 - 汉字 / Chinese characters：霞鹜文楷 LXGW WenKai Bold，SIL Open Font License 1.1
-- 索引字母 / Index labels (`svg_tiles_index_*` only)：DejaVu Sans Bold，Bitstream Vera Fonts License
+- 索引字母 / Index labels (`svg_tiles_index_plain/` only)：DejaVu Sans Bold，Bitstream Vera Fonts License
